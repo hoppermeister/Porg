@@ -21,12 +21,21 @@ module.exports = (robot) ->
 				if garage.garage.toLowerCase() is msg.match[2].toLowerCase()
 					msg.send("Garage " + garage.garage + " is " + garage.perc + "% full")
 
-	robot.respond /garage/i, (msg)->
+	robot.respond /garage$/i, (msg)->
 		getGarages (garages) ->
 			response = ""
 			for garage in garages
 				response += "Garage #{garage.garage} #{garage.perc}%\n"
 			msg.send(response)
+			
+	robot.respond /garage vt/i, (msg)->
+		msg.send("https://i.imgur.com/oOXDJDU.jpg")
+	
+	robot.respond /garage villanova/i, (msg)->
+		msg.send("uh i was going to put a picture of a sad wildcat but all I found was furry stuff, sorry Carolyn!")
+	
+	robot.respond /garage canada/i, (msg)->
+		msg.send("https://thecord.ca/wp-content/uploads/2015/11/Canadian-stereotypes-Jessica-Wood.jpg")
 	
 	robot.respond /where should I park?/i, (msg)->		
 		getGarages (garages) ->
