@@ -10,7 +10,6 @@
 
 
 module.exports = function(robot) {
-	let getGarages;
 	const request = require('request');
 	const cheerio = require('cheerio');
 
