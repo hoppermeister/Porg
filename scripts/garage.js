@@ -44,7 +44,7 @@ module.exports = function(robot) {
 				response += "http://i.imgur.com/OXlUFE1.jpg\n";
 			}
 			if (pubsub) {
-				response += "<www.arepublixchickentendersubsonsale.com | But hey, <Chicken Tender Subs are on sale!>";
+				response += "www.arepublixchickentendersubsonsale.com | But hey, <Chicken Tender Subs are on sale!";
 			}
 
 			return msg.send(response);
